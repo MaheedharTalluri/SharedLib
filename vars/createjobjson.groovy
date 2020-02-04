@@ -32,7 +32,7 @@ sh "java -jar job-dsl-core-1.76-standalone.jar pipeline.groovy"
 }
 
 
-sh "var=$(curl -XGET 'http://18.221.47.136:8080/job/EDN2500/api/json' --user admin:119767fb81f22e2f10d8594e4201717e53)"
+sh "var="$(curl -XGET 'http://18.221.47.136:8080/job/EDN2500/api/json' --user admin:119767fb81f22e2f10d8594e4201717e53)""
 echo $var
 
 
