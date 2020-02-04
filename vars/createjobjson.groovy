@@ -32,12 +32,12 @@ sh "java -jar job-dsl-core-1.76-standalone.jar pipeline.groovy"
 }
 
 
-jurl='curl -XGET http://18.221.47.136:8080/checkJobName?value='+jobname+' --user admin:119767fb81f22e2f10d8594e4201717e53'
+jurl='curl -XGET http://18.219.210.127:8080/checkJobName?value='+jobname+' --user admin:119767fb81f22e2f10d8594e4201717e53'
 
 
 
 
-def response = sh(script: "curl -XGET http://18.221.47.136:8080/checkJobName?value='${jobname}' --user admin:119767fb81f22e2f10d8594e4201717e53", returnStdout: true)
+def response = sh(script: "curl -XGET http://18.219.210.127:8080/checkJobName?value='${jobname}' --user admin:119767fb81f22e2f10d8594e4201717e53", returnStdout: true)
 
 println(response)
 
@@ -50,7 +50,7 @@ if ( response == "</div>")
 
 
 
-url='http://18.221.47.136:8080/createItem?name='+jobname
+url='http://18.219.210.127:8080/createItem?name='+jobname
 sh "echo ${url}"
 sh "curl -s -XPOST  '$url' -u admin:119767fb81f22e2f10d8594e4201717e53 --data-binary @Test.xml -H Content-Type:text/xml"
 }
