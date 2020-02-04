@@ -54,6 +54,10 @@ url='http://18.221.47.136:8080/createItem?name='+jobname
 sh "echo ${url}"
 sh "curl -s -XPOST  '$url' -u admin:119767fb81f22e2f10d8594e4201717e53 --data-binary @Test.xml -H Content-Type:text/xml"
 }
+else{
+println("A job with name '${jobname}' already exists")
+
+}
 }
 
 
