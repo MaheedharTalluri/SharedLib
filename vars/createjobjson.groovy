@@ -35,13 +35,14 @@ sh "java -jar job-dsl-core-1.76-standalone.jar pipeline.groovy"
 jurl='curl -XGET http://18.221.47.136:8080/checkJobName?value='+jobname+' --user admin:119767fb81f22e2f10d8594e4201717e53'
 
 
-def response = sh(script: "'${jurl}'", returnStdout: true)
+def var = sh(script: "'${jurl}'", returnStdout: true)
 
 
 def response = sh(script: 'curl -XGET http://18.221.47.136:8080/checkJobName?value=EDN250 --user admin:119767fb81f22e2f10d8594e4201717e53', returnStdout: true)
 
 println(response)
 
+println(var)
 
 
 
