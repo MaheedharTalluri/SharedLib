@@ -35,7 +35,7 @@ sh "java -jar job-dsl-core-1.76-standalone.jar pipeline.groovy"
 jurl='http://18.221.47.136:8080/job/'+'EDN2500'+'/api/json'
 
 
-def response = sh(script: 'curl -XGET 'http://18.221.47.136:8080/checkJobName?value=EDN250' --user admin:119767fb81f22e2f10d8594e4201717e53', returnStdout: true)
+def response = sh(script: 'curl -XGET http://18.221.47.136:8080/checkJobName?value=EDN250 --user admin:119767fb81f22e2f10d8594e4201717e53', returnStdout: true)
 
 println(var)
 
