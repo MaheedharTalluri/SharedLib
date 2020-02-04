@@ -2,7 +2,7 @@ def call(jsondata){
 def jsonString = jsondata
 println(jsonString)
 def jsonObj = readJSON text: jsonString
-println(jsonObj.ci.jobs)
+println(jsonObj.ci.jobs.job.job_name)
 String a=jsonObj.ci.jobs.job.job_name
 
 String jobname=a.replaceAll("\\[", "").replaceAll("\\]","");
