@@ -1,8 +1,10 @@
 def call(jsondata){
 def jsonString = jsondata
-println(JSON)
+println(jsonString)
 def jsonObj = readJSON text: jsonString
+println(jsonObj.ci)
 String a=jsonObj.ci.jobs.job.job_name
+
 String jobname=a.replaceAll("\\[", "").replaceAll("\\]","");
 String b=jsonObj.ci.jobs.job.dsl_fileName
 String dslfilename=b.replaceAll("\\[", "").replaceAll("\\]","");
