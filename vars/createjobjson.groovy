@@ -41,7 +41,7 @@ def response = sh(script: "curl -XGET http://18.219.210.127:8080/checkJobName?va
 
 println(response)
 
-if ( response == "</div>")
+if ( response == "<div/>")
 {
 
 
