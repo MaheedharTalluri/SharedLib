@@ -1,4 +1,4 @@
-@NonCPS
+
 def call(){
 sh "curl -X PUT http://18.221.205.57:8181/v1/data/myapi/acl --data-binary @open-policy-agent/JENKINS/BuildPolicy/jenkins-acl.json"
 sh "curl -X PUT http://18.221.205.57:8181/v1/policies/myapi --data-binary @open-policy-agent/JENKINS/BuildPolicy/jenkins-policy.rego"
