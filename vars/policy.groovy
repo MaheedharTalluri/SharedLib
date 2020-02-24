@@ -5,7 +5,7 @@ sh "curl -X PUT http://18.222.66.194:8181/v1/policies/myapi --data-binary @open-
 sh """curl --location --request POST 'http://18.222.66.194:8181/v1/data/myapi/policy/allow' --header 'Content-Type: application/json' --data-raw '{ "input": { "user": "maheedhar", "access": "build" } }'"""
 String response = sh(script:"""curl --location --request POST 'http://18.222.66.194:8181/v1/data/myapi/policy/allow' --header 'Content-Type: application/json' --data-raw '{ "input": { "user": "maheedhar", "access": "build" } }'""", returnStdout: true)
 println(response)
-if ( response == "{/"result/":true}" )
+if ( response == "{\"result\":true}" )
 println("You can build a job")
 
 }
