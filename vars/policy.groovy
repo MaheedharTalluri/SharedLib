@@ -28,7 +28,7 @@ sh "curl -X PUT http://18.221.205.57:8181/v1/policies/myapi --data-binary @open-
 
 
 
-sh "echo '${userid}'"
+println(userid)
 
 
 String response = sh(script:"""curl --location --request POST 'http://18.221.205.57:8181/v1/data/myapi/policy/allow' --header 'Content-Type: application/json' --data-raw '{ "input": { "user": "'${userid}'", "access": "build" } }'""", returnStdout: true)
