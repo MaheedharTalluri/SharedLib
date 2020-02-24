@@ -1,7 +1,7 @@
 def call(){
 sh "curl -X PUT http://18.222.66.194:8181/v1/data/myapi/acl --data-binary @open-policy-agent/JENKINS/BuildPolicy/jenkins-acl.json"
 sh "curl -X PUT http://18.222.66.194:8181/v1/policies/myapi --data-binary @open-policy-agent/JENKINS/BuildPolicy/jenkins-policy.rego"
-sh "curl -X POST http://18.222.66.194:8181/v1/data/myapi/policy/allow --data-binary '{ "input": { "user": "maheedhar", "access": "build" } }'"
+sh "curl -X POST http://18.222.66.194:8181/v1/data/myapi/policy/allow --data-binary '{ /"input/": { /"user/": /"maheedhar/", /"access/": /"build/" } }'"
 def response = sh(script:'curl -X POST http://18.222.66.194:8181/v1/data/myapi/policy/allow --data-binary "{ "input": { "user": "maheedhar", "access": "build" } }"', returnStdout: true)
 println(response)
 }
