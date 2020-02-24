@@ -14,4 +14,3 @@ else{
 error("Build failed beacuse you do not have permission to trigger a build")
 }
 }
-}
