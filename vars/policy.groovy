@@ -15,3 +15,4 @@ if (!continueBuild) {
     currentBuild.result = 'ABORTED'
 }
 }
+}
