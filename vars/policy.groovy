@@ -11,9 +11,7 @@ println("You can build a job")
 
 }
 else{
-println("You do not have access to trigger a build")
-if (!continueBuild) {
-    currentBuild.result = 'ABORTED'
+error("Build failed beacuse you do not have permission to trigger a build")
 }
 }
 }
