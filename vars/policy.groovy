@@ -5,7 +5,7 @@ sh """curl --location --request POST 'http://18.222.66.194:8181/v1/data/myapi/po
 def response = sh(script:"""curl --location --request POST 'http://18.222.66.194:8181/v1/data/myapi/policy/allow' --header 'Content-Type: application/json' --data-raw '{ "input": { "user": "maheedhar", "access": "build" } }'""", returnStdout: true)
 println(response)
 //def jsonObj = readJSON text: response
-println(jsonObj.result)
+//println(jsonObj.result)
 
 
 }
