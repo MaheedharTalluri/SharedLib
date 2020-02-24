@@ -5,7 +5,7 @@ sh "curl -X PUT http://18.221.205.57:8181/v1/policies/myapi --data-binary @open-
 
 
 
-def build = currentBuild.rawbuild
+def build = currentBuild.rawBuild
 def cause = build.getCause(hudson.model.Cause.UserIdCause.class)
 def userid = cause.getUserName()
 sh "echo '${userid}'"
