@@ -1,10 +1,10 @@
 @NonCPS
 
-
+def getuserid(){
 def build = currentBuild.rawBuild
 def cause = build.getCause(hudson.model.Cause.UserIdCause.class)
 def userid = cause.getUserName()
-
+}
 
 def call(){
 
@@ -26,7 +26,7 @@ sh "curl -X PUT http://18.221.205.57:8181/v1/policies/myapi --data-binary @open-
 
 
 
-
+getuserid()
 
 println(userid)
 
